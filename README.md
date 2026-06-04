@@ -1,6 +1,15 @@
 # Anti-Spam Links for SMF 2.1.x
 
 A modern SMF 2.1.x compatible version of the classic Anti-Spam Links modification.
+## Screenshots
+
+### Settings
+
+![Settings](screenshots/admin-settings.png)
+
+### Example
+
+![Example](screenshots/post-blocked-link.png)
 
 ## Features
 
