@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>CustomizeTeam:AntiSpamLinks</id>
+	<name>Anti-Spam Links for SMF 2.1.x</name>
+	<version>2.1.0</version>
+	<type>modification</type>
+
+	<install for="2.1 - 2.1.99,2.1 RC1,2.1 RC2,2.1 RC3,2.1 RC4,2.1 Beta 1,2.1 Beta 2,2.1 Beta 3">
+		<readme parsebbc="false">readme.txt</readme>
+		<database>install.php</database>
+
+		<require-file name="SMF-2.1/Sources/AntiSpamLinks.php" destination="$sourcedir" />
+		<require-file name="SMF-2.1/Themes/default/languages/AntiSpamLinks.english.php" destination="$boarddir/Themes/default/languages" />
+		<require-file name="SMF-2.1/Themes/default/languages/AntiSpamLinks.vietnamese.php" destination="$boarddir/Themes/default/languages" />
+
+		<hook hook="integrate_load_theme" function="AntiSpamLinks_LoadTheme" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_modify_post_settings" function="AntiSpamLinks_ModifyPostSettings" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_save_post_settings" function="AntiSpamLinks_SavePostSettings" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_post_errors" function="AntiSpamLinks_PostErrors" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_preview_post" function="AntiSpamLinks_PreviewPost" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_post_JavascriptModify" function="AntiSpamLinks_JavaScriptModify" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_jsmodify_xml" function="AntiSpamLinks_JavaScriptModifyXml" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_prepare_display_context" function="AntiSpamLinks_PrepareDisplayContext" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_getTopic_previous_post" function="AntiSpamLinks_PreviousPost" file="$sourcedir/AntiSpamLinks.php" />
+		<hook hook="integrate_member_context" function="AntiSpamLinks_MemberContext" file="$sourcedir/AntiSpamLinks.php" />
+	</install>
+
+	<uninstall for="2.1 - 2.1.99,2.1 RC1,2.1 RC2,2.1 RC3,2.1 RC4,2.1 Beta 1,2.1 Beta 2,2.1 Beta 3">
+		<hook hook="integrate_load_theme" function="AntiSpamLinks_LoadTheme" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_modify_post_settings" function="AntiSpamLinks_ModifyPostSettings" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_save_post_settings" function="AntiSpamLinks_SavePostSettings" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_post_errors" function="AntiSpamLinks_PostErrors" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_preview_post" function="AntiSpamLinks_PreviewPost" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_post_JavascriptModify" function="AntiSpamLinks_JavaScriptModify" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_jsmodify_xml" function="AntiSpamLinks_JavaScriptModifyXml" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_prepare_display_context" function="AntiSpamLinks_PrepareDisplayContext" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_getTopic_previous_post" function="AntiSpamLinks_PreviousPost" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+		<hook hook="integrate_member_context" function="AntiSpamLinks_MemberContext" file="$sourcedir/AntiSpamLinks.php" reverse="true" />
+
+		<database>uninstall.php</database>
+
+		<remove-file name="$sourcedir/AntiSpamLinks.php" />
+		<remove-file name="$boarddir/Themes/default/languages/AntiSpamLinks.english.php" />
+		<remove-file name="$boarddir/Themes/default/languages/AntiSpamLinks.vietnamese.php" />
+	</uninstall>
+</package-info>
