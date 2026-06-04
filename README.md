@@ -5,7 +5,7 @@ A modern SMF 2.1.x compatible version of the classic Anti-Spam Links modificatio
 
 ### Settings
 
-![Settings](screenshots/admin-settings.png)
+![Settings](screenshots/admin-setting.png)
 
 ### Example
 
