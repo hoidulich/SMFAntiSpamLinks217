@@ -34,3 +34,11 @@ Notes
 - Internal links to your forum are excluded.
 - If both "nonactive" and "nofollow" thresholds are enabled, the package ensures the nofollow threshold stays above the nonactive threshold.
 
+## Credits
+
+Based on the original Anti-Spam Links mod:
+
+https://custom.simplemachines.org/mods/index.php?mod=2404
+
+SMF 2.1.x Port and Rewrite:
+Thanh Nguyen (hoidulich.com)
